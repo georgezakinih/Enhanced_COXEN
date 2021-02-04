@@ -1,5 +1,4 @@
-# Enhanced_COXEN
-Enhanced Co-Expression Extrapolation (COXEN) Gene Selection Method for Building Drug Response Prediction Models
+# Enhanced Co-Expression Extrapolation (COXEN) Gene Selection Method for Building Drug Response Prediction Models
 
 The co-expression extrapolation (COXEN) method has been successfully used in multiple studies to select genes for predicting the response of tumor cells to a specific drug treatment. We enhance the COXEN method to select genes that are predictive of the efficacies of multiple drugs for building general drug response prediction models that are not specific to a particular drug. The enhanced COXEN method first ranks the genes according to their prediction power for each individual drug and then takes a union of top predictive genes of all the drugs, among which the algorithm further selects genes whose co-expression patterns are well preserved between cancer cases for building prediction models. The paper is available at https://www.mdpi.com/2073-4425/11/9/1070
 
