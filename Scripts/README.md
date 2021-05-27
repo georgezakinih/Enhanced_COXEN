@@ -8,10 +8,12 @@ To set up the Python environment needed to train and run this model:
 1. Install [conda](https://docs.conda.io/en/latest/) package manager.
 2. Clone this repository.
 3. Enter the directory of Scripts
-3. Create the environment as shown below.
+4. Create the environment as shown below.
+    '''
     conda env create -f environment.yml -n Enhanced_COXEN
     conda activate Enhanced_COXEN
-4.  Run the Example_Run.py script.
+    '''
+5.  Run the Example_Run.py script for demo.
 
 ## Use Enhanced COXEN for Gene Selection
 
