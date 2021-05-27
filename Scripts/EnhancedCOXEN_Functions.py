@@ -253,8 +253,8 @@ def coxen_single_drug_gene_selection(source_data, target_data, drug_response_dat
 def coxen_multi_drug_gene_selection(source_data, target_data, drug_response_data, drug_response_col, tumor_col, drug_col,
                          prediction_power_measure='pearson', num_predictive_gene=100, num_generalizable_gene=50):
     '''
-    This function uses the COXEN approach to select genes for predicting the response of multiple drugs.
-    It assumes no missing data exist. For each drug, this functions ranks the genes according to their power
+    This function uses the enhanced COXEN approach to select genes for predicting the response of multiple drugs.
+    It assumes that there is no missing data. For each drug, this functions ranks the genes according to their power
     of predicting the response of the drug. The union of an equal number of predictive genes for every drug
     will be generated, and its size must be at least num_predictive_gene. Then, num_generalizable_gene
     generalizable genes will be selected from the candidate pool.
@@ -262,23 +262,24 @@ def coxen_multi_drug_gene_selection(source_data, target_data, drug_response_data
     Parameters:
     -----------
     source_data: pandas data frame of gene expressions of tumors, for which drug response is known. Its size is
-        [n_source_samples, n_features].
+        [n_source_samples, n_features]. The column names are gene identifiers, and the row indices are tumor identifiers.
     target_data: pandas data frame of gene expressions of tumors, for which drug response needs to be predicted.
         Its size is [n_target_samples, n_features]. source_data and target_data have the same set
-        of features and the orders of features must match.
+        of features(genes) and the orders of features(genes) must match.
     drug_response_data: pandas data frame of drug response that must include a column of drug response values,
-        a column of tumor IDs, and a column of drug IDs.
+        a column of tumor identifiers, and a column of drug identifiers.
     drug_response_col: non-negative integer or string. If integer, it is the column index of drug response in
         drug_response_data. If string, it is the column name of drug response.
-    tumor_col: non-negative integer or string. If integer, it is the column index of tumor IDs in drug_response_data.
-        If string, it is the column name of tumor IDs.
-    drug_col: non-negative integer or string. If integer, it is the column index of drugs in drug_response_data.
-        If string, it is the column name of drugs.
+    tumor_col: non-negative integer or string. If integer, it is the column index of tumor identifiers in drug_response_data.
+        If string, it is the column name of tumor identifiers.
+    drug_col: non-negative integer or string. If integer, it is the column index of drug identifiers in drug_response_data.
+        If string, it is the column name of drug identifiers.
     prediction_power_measure: 'pearson' or 'mutual_info'. 'pearson' uses the absolute value of Pearson correlation
         coefficient to measure prediction power of a gene; 'mutual_info' uses the mutual information to measure
         prediction power of a gene.
     num_predictive_gene: positive integer indicating the number of predictive genes to be selected.
-    num_generalizable_gene: positive integer indicating the number of generalizable genes to be selected.
+    num_generalizable_gene: positive integer indicating the number of generalizable genes to be selected from the candidate 
+        pool of predictive genes. This will be the number of genes finally selected by the method.
 
     Returns:
     --------
