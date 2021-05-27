@@ -6,8 +6,8 @@ The enhanced co-expression extrapolation COXEN method enhances the original COXE
 
 ## User Community
 
-* Primary: cancer biology data modeling
-* Secondary: machine learning; bioinformatics; computational biology
+- Primary: cancer biology data modeling
+- Secondary: machine learning; bioinformatics; computational biology
 
 ## Usability
 
