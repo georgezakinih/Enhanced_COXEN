@@ -9,12 +9,12 @@ To set up the Python environment needed to train and run this model:
 2. Clone this repository.
 3. Enter the directory of Scripts
 4. Create the environment as shown below.
-    '''
+    ```
     conda env create -f environment.yml -n Enhanced_COXEN
     conda activate Enhanced_COXEN
-    '''
+    ```
 5.  Run the Example_Run.py script for demo.
 
 ## Use Enhanced COXEN for Gene Selection
 
-coxen_multi_drug_gene_selection is the main function that performs the enhanced COXEN gene selection. It is provided in the EnhancedCOXEN_Functions.py script, with comments explaining the input and output of the function in details. Example_Run.py provides an exmaple demonstrating how to use the function. 
+The EnhancedCOXEN_Functions.py script provides all the functions used by the enhanced COXEN method. coxen_multi_drug_gene_selection is the main function that performs the enhanced COXEN gene selection. Please see its comments explaining the input and output of the function in details. Example_Run.py provides an exmaple demonstrating how to use the function. 
