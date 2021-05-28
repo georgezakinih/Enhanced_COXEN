@@ -4,7 +4,7 @@ The enhanced COXEN method is designed for the applications where the drug effica
 
 ## Setup
 
-To set up the Python environment needed to train and run this model:
+To set up the Python environment needed to run this algorithm:
 1. Install [conda](https://docs.conda.io/en/latest/) package manager.
 2. Clone this repository.
 3. Enter the directory of Scripts
